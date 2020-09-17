@@ -14,7 +14,7 @@ export default class GifSearch extends Component {
         event.preventDefault()
         this.props.fetching(this.state.query)
 
-    } 
+    }
     render() {
         return (
             <div>
