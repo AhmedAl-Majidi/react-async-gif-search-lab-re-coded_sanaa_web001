@@ -3,11 +3,11 @@ import GifList from '../components/GifList'
 import GifSearch from '../components/GifSearch'
 
 class GifListContainer extends React.Component {
- 
+
     state = {
       fetchedGifs: []
     }
-   
+
     render() {
       return (
           <div>
@@ -16,7 +16,7 @@ class GifListContainer extends React.Component {
           </div>
       )
     }
-   
+
      fetching = function(query) {
         fetch(`https://api.giphy.com/v1/gifs/search?q=${query}&api_key=dc6zaTOxFJmzC&rating=g`)
         .then(response => response.json())
@@ -29,11 +29,11 @@ class GifListContainer extends React.Component {
         })
         })
     }
-   
+
     componentDidMount() {
         this.fetching()
     }
-    
+
   }
-   
+
   export default GifListContainer
